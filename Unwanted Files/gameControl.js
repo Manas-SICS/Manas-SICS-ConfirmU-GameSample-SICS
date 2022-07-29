@@ -1,10 +1,10 @@
-import {IntroScreen ,OutsideShop1} from "./state.js";
+import {IntroScreen ,OutsideShop1, State} from "./state.js";
 
 export default class GameWindow {
     constructor(gameWidth, gameHeight){
         this.gameWidth = gameWidth;
         this.gameHeight = gameHeight;
-        this.states = [new IntroScreen(), new OutsideShop1()];
+        this.states = [new IntroScreen(this), new OutsideShop1(this)];
         this.currentState = this.states[0];
         this.bgImage = document.getElementById('cu-logo');
         this.x = 0;
@@ -13,7 +13,7 @@ export default class GameWindow {
     }
 
     draw(context){
-        context.drawImage(this.bgImage, this.x, this.y);
+        context.drawImage(this.bgImage, this.x, this.y, this.gameWidth, this.gameHeight );
     }
 
     update(input){

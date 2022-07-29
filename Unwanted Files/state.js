@@ -18,7 +18,7 @@ export const states = {
     // GAMEOVER: 16, 
 }
 
-class State {
+export class State {
     constructor(state){
         this.state = state;
     }
@@ -36,6 +36,7 @@ export class IntroScreen extends State{
     }
 
     handleInput(input){
+        console.log(this.game);
         if (input === "Clicked") this.game.setState(states.OUTSIDE_SHOP_1);
     }
 }
@@ -51,6 +52,5 @@ export class OutsideShop1 extends State{
     }
 
     handleInput(input){
-        if (input === "Clicked") this.game.setState(states.INTRO_SCREEN);
     }
 }

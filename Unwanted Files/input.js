@@ -1,8 +1,9 @@
 export default class InputHandler{
     constructor(){
         this.lastKey = '';
-        window.addEventListener('click' , (e) => {
+        window.addEventListener('mousedown' , (e) => {
             this.lastKey = 'Clicked';
         })
+
     }
 }
