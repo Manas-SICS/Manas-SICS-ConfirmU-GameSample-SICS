@@ -1,5 +1,5 @@
 import GameWindow from './Unwanted Files/gameControl.js.js';
-import InputHandler from './input.js'
+import InputHandler from '../JS/input.js/index.js'
 
 window.addEventListener('load', function(){
     const canvas = this.document.getElementById('demoGame');
